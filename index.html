@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ClipForge — AI Video Repurposing Spec Project</title>
+    <meta name="description" content="Turn long-form YouTube videos into short-form TikTok clips without starting from scratch. Spec copywriting & UX project by Elijah Amujo.">
+    <!-- Tailwind CSS Engine & CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #09090b;
+            --card-bg: #121215;
+            --border: rgba(255, 255, 255, 0.08);
+        }
+        body {
+            font-family: 'Outfit', sans-serif;
+            background-color: var(--bg);
+            color: #f4f4f5;
+        }
+        h1, h2, h3, h4, .font-heading {
+            font-family: 'Space Grotesk', sans-serif;
+        }
+        .text-gradient {
+            background: linear-gradient(to right, #ffffff, #a1a1aa);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .glow-effect {
+            box-shadow: 0 0 50px -12px rgba(255, 255, 255, 0.12);
+        }
+    </style>
+</head>
+<body class="selection:bg-white selection:text-black antialiased">
+
+    <!-- PORTFOLIO SPEC BANNER -->
+    <div class="bg-zinc-900 border-b border-white/10 py-2.5 px-6 text-xs text-zinc-400">
+        <div class="max-w-6xl mx-auto flex justify-between items-center">
+            <span class="inline-flex items-center gap-2 font-mono text-[11px] tracking-wider text-zinc-300">
+                <span class="w-2 h-2 rounded-full bg-violet-400 animate-pulse"></span>
+                SPEC CASE STUDY • B2C SAAS COPYWRITING
+            </span>
+            <a href="index.html" class="text-xs text-white hover:underline font-medium flex items-center gap-1">
+                ← Back to Portfolio
+            </a>
+        </div>
+    </div>
+
+    <!-- 1. NAVIGATION -->
+    <nav class="sticky top-0 z-50 bg-[#09090b]/90 backdrop-blur-md border-b border-white/10 px-6 py-4">
+        <div class="max-w-6xl mx-auto flex justify-between items-center">
+            <a href="#" class="text-xl font-bold tracking-tighter text-white flex items-center gap-2 font-heading">
+                <span class="w-3.5 h-3.5 bg-violet-500 rounded-sm"></span> CLIPFORGE
+            </a>
+            
+            <div class="hidden md:flex items-center gap-8 text-xs font-medium text-zinc-400 uppercase tracking-widest">
+                <a href="#problem" class="hover:text-white transition-colors">The Problem</a>
+                <a href="#desired-outcome" class="hover:text-white transition-colors">Outcome</a>
+                <a href="#how-it-works" class="hover:text-white transition-colors">How It Works</a>
+                <a href="#features" class="hover:text-white transition-colors">Features</a>
+                <a href="#faq" class="hover:text-white transition-colors">FAQ</a>
+            </div>
+
+            <div>
+                <a href="#cta" class="bg-white text-black text-xs font-semibold px-4 py-2.5 rounded-sm hover:bg-zinc-200 transition-all uppercase tracking-wider inline-block">
+                    Create a clip
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 2. HERO SECTION -->
+    <section class="py-20 md:py-32 px-6 relative overflow-hidden">
+        <div class="max-w-4xl mx-auto text-center space-y-8 relative z-10">
+            <!-- Eyebrow -->
+            <div>
+                <span class="inline-block px-3 py-1 rounded-full border border-violet-500/30 bg-violet-500/10 text-violet-300 font-mono text-xs tracking-widest uppercase">
+                    AI Video Repurposing
+                </span>
+            </div>
+
+            <!-- Headline -->
+            <h1 class="text-4xl md:text-6xl font-bold text-white tracking-tight leading-[1.15] font-heading">
+                Your best short-form content might already be hiding inside your long videos.
+            </h1>
+
+            <!-- Supporting Copy -->
+            <p class="text-lg md:text-xl text-zinc-400 max-w-2xl mx-auto font-light leading-relaxed">
+                ClipForge finds the moments worth clipping and turns long-form videos into short-form content—so you can spend less time scrubbing timelines and more time creating.
+            </p>
+
+            <!-- Actions -->
+            <div class="pt-4 flex flex-col sm:flex-row items-center justify-center gap-4">
+                <a href="#cta" class="w-full sm:w-auto px-8 py-4 bg-white text-black font-semibold rounded-sm hover:bg-zinc-200 transition-all text-sm uppercase tracking-widest">
+                    Create a clip
+                </a>
+                <a href="#how-it-works" class="w-full sm:w-auto px-8 py-4 border border-zinc-700 text-zinc-300 font-semibold rounded-sm hover:border-white hover:text-white transition-all text-sm uppercase tracking-widest">
+                    See how it works
+                </a>
+            </div>
+
+            <!-- Reassurance -->
+            <p class="text-xs text-zinc-500 pt-2 font-mono">
+                Turn long-form content into short-form clips without starting from scratch.
+            </p>
+        </div>
+
+        <!-- Product UI Hero Mockup -->
+        <div class="max-w-5xl mx-auto mt-16 border border-white/10 rounded-xl bg-[#121215] p-4 md:p-6 glow-effect relative">
+            <div class="flex items-center justify-between pb-4 mb-6 border-b border-white/5">
+                <div class="flex items-center gap-2">
+                    <span class="w-3 h-3 rounded-full bg-zinc-700"></span>
+                    <span class="w-3 h-3 rounded-full bg-zinc-700"></span>
+                    <span class="w-3 h-3 rounded-full bg-zinc-700"></span>
+                </div>
+                <span class="text-xs font-mono text-zinc-500">clipforge.app/studio</span>
+            </div>
+
+            <div class="grid md:grid-cols-12 gap-6 items-center">
+                <!-- Video Timeline Visual -->
+                <div class="md:col-span-7 bg-zinc-950 p-4 rounded-lg border border-white/5 space-y-4">
+                    <div class="aspect-video bg-zinc-900 rounded flex items-center justify-center relative overflow-hidden border border-white/5">
+                        <div class="text-center p-6">
+                            <svg class="w-12 h-12 text-zinc-600 mx-auto mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                            <p class="text-xs text-zinc-400 font-mono">YouTube Podcast Episode #42 (58:12)</p>
+                        </div>
+                    </div>
+                    <!-- Timeline scrubber with detected highlights -->
+                    <div class="space-y-2">
+                        <div class="flex justify-between text-[10px] font-mono text-zinc-500">
+                            <span>00:00</span>
+                            <span class="text-violet-400">3 Clips Identified</span>
+                            <span>58:12</span>
+                        </div>
+                        <div class="h-3 bg-zinc-800 rounded-full relative overflow-hidden flex items-center">
+                            <div class="absolute left-[18%] w-[8%] h-full bg-violet-500/80 rounded-sm"></div>
+                            <div class="absolute left-[42%] w-[6%] h-full bg-violet-500/80 rounded-sm"></div>
+                            <div class="absolute left-[75%] w-[9%] h-full bg-violet-500/80 rounded-sm"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Generated Clip Preview Cards -->
+                <div class="md:col-span-5 space-y-3">
+                    <p class="text-xs font-mono text-zinc-400 uppercase tracking-wider mb-2">Detected Key Moments</p>
+                    
+                    <div class="p-3 bg-zinc-900 rounded border border-violet-500/30 flex items-center justify-between">
+                        <div class="flex items-center gap-3">
+                            <div class="w-8 h-12 bg-zinc-800 rounded border border-white/10 flex-shrink-0 flex items-center justify-center text-[10px] text-zinc-500 font-mono">9:16</div>
+                            <div>
+                                <p class="text-xs font-semibold text-white">The secret to content retention</p>
+                                <p class="text-[11px] text-zinc-500 font-mono">Timestamp: 14:22 • 22s clip</p>
+                            </div>
+                        </div>
+                        <span class="text-[10px] bg-violet-500/20 text-violet-300 font-mono px-2 py-1 rounded">Ready</span>
+                    </div>
+
+                    <div class="p-3 bg-zinc-900/50 rounded border border-white/5 flex items-center justify-between">
+                        <div class="flex items-center gap-3">
+                            <div class="w-8 h-12 bg-zinc-800 rounded border border-white/10 flex-shrink-0 flex items-center justify-center text-[10px] text-zinc-500 font-mono">9:16</div>
+                            <div>
+                                <p class="text-xs font-medium text-zinc-300">Why long-form builds real trust</p>
+                                <p class="text-[11px] text-zinc-500 font-mono">Timestamp: 28:05 • 18s clip</p>
+                            </div>
+                        </div>
+                        <span class="text-[10px] bg-zinc-800 text-zinc-400 font-mono px-2 py-1 rounded">Ready</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. PROBLEM SECTION -->
+    <section id="problem" class="py-24 px-6 border-t border-white/5 bg-zinc-950/60">
+        <div class="max-w-4xl mx-auto space-y-12">
+            <div class="space-y-4 text-center md:text-left">
+                <p class="text-xs font-mono uppercase tracking-widest text-zinc-500">The Workflow Bottleneck</p>
+                <h2 class="text-3xl md:text-5xl font-bold text-white tracking-tight leading-tight font-heading">
+                    You already made the content. <br class="hidden md:block"/>Why are you editing it again?
+                </h2>
+            </div>
+
+            <div class="grid md:grid-cols-12 gap-8 items-center">
+                <div class="md:col-span-7 space-y-6 text-zinc-400 text-base leading-relaxed">
+                    <p>A creator records a one-hour video.</p>
+                    <p>Inside it are dozens of moments that could become great short-form content.</p>
+                    <p>
+                        But finding them means opening the editor, scrubbing through the timeline, stopping every few seconds, cutting clips, and repeating the process until the good moments finally emerge.
+                    </p>
+                    <div class="p-4 border-l-2 border-violet-500 bg-zinc-900/40 text-white font-medium">
+                        The content isn't the problem. The manual process is.
+                    </div>
+                </div>
+
+                <!-- Visual Representation of Long Video Timeline -->
+                <div class="md:col-span-5 bg-zinc-900/80 p-6 rounded-xl border border-white/5 space-y-4">
+                    <p class="text-xs font-mono text-zinc-400 uppercase tracking-wider">Manual Timeline Scrubbing</p>
+                    
+                    <div class="space-y-3 font-mono text-xs">
+                        <div class="p-2.5 bg-zinc-950 rounded border border-white/5 text-zinc-500 flex justify-between">
+                            <span>00:12:04</span>
+                            <span class="text-red-400/80">Intro chatter (Skip)</span>
+                        </div>
+                        <div class="p-2.5 bg-zinc-950 rounded border border-violet-500/40 text-zinc-200 flex justify-between">
+                            <span>00:18:40</span>
+                            <span class="text-violet-400">Core insight highlighted</span>
+                        </div>
+                        <div class="p-2.5 bg-zinc-950 rounded border border-white/5 text-zinc-500 flex justify-between">
+                            <span>00:24:15</span>
+                            <span class="text-red-400/80">Technical explanation (Skip)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. DESIRED OUTCOME (DESIRE SECTION) -->
+    <section id="desired-outcome" class="py-24 px-6 border-t border-white/5">
+        <div class="max-w-5xl mx-auto space-y-16">
+            <div class="text-center max-w-3xl mx-auto space-y-4">
+                <p class="text-xs font-mono uppercase tracking-widest text-violet-400">Maximize Existing Assets</p>
+                <h2 class="text-3xl md:text-5xl font-bold text-white tracking-tight font-heading">
+                    One long video. More chances to be seen.
+                </h2>
+                <p class="text-zinc-400 text-lg">
+                    Turn your existing long-form content into additional short-form opportunities without burning out in editing software.
+                </p>
+            </div>
+
+            <!-- Benefit Cards -->
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Card 1 -->
+                <div class="bg-[#121215] p-8 rounded-xl border border-white/5 space-y-4">
+                    <div class="w-10 h-10 rounded bg-white/5 border border-white/10 flex items-center justify-center text-violet-400 font-mono text-sm">
+                        01
+                    </div>
+                    <h3 class="text-xl font-bold text-white font-heading">Find the moments</h3>
+                    <p class="text-zinc-400 text-sm leading-relaxed">
+                        Identify interesting sections without manually searching through the entire video timeline line by line.
+                    </p>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="bg-[#121215] p-8 rounded-xl border border-white/5 space-y-4">
+                    <div class="w-10 h-10 rounded bg-white/5 border border-white/10 flex items-center justify-center text-violet-400 font-mono text-sm">
+                        02
+                    </div>
+                    <h3 class="text-xl font-bold text-white font-heading">Turn moments into clips</h3>
+                    <p class="text-zinc-400 text-sm leading-relaxed">
+                        Transform selected moments directly into short-form videos formatted for vertical viewing.
+                    </p>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="bg-[#121215] p-8 rounded-xl border border-white/5 space-y-4">
+                    <div class="w-10 h-10 rounded bg-white/5 border border-white/10 flex items-center justify-center text-violet-400 font-mono text-sm">
+                        03
+                    </div>
+                    <h3 class="text-xl font-bold text-white font-heading">Keep creating</h3>
+                    <p class="text-zinc-400 text-sm leading-relaxed">
+                        Spend less time editing old content and more time focusing on making your next original piece.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. HOW IT WORKS -->
+    <section id="how-it-works" class="py-24 px-6 border-t border-white/5 bg-zinc-950/60">
+        <div class="max-w-4xl mx-auto space-y-16">
+            <div class="text-center space-y-4">
+                <p class="text-xs font-mono uppercase tracking-widest text-zinc-500">Simple Workflow</p>
+                <h2 class="text-3xl md:text-5xl font-bold text-white tracking-tight font-heading">How ClipForge Works</h2>
+            </div>
+
+            <!-- Progression Steps -->
+            <div class="grid md:grid-cols-3 gap-8 relative">
+                <!-- Step 1 -->
+                <div class="bg-[#121215] p-6 rounded-lg border border-white/5 space-y-3 relative">
+                    <span class="text-xs font-mono text-violet-400 font-bold">01 — UPLOAD</span>
+                    <h3 class="text-lg font-bold text-white font-heading">Give ClipForge your video</h3>
+                    <p class="text-xs text-zinc-400 leading-relaxed">
+                        Provide your long-form YouTube video or podcast file to begin the extraction process.
+                    </p>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="bg-[#121215] p-6 rounded-lg border border-white/5 space-y-3 relative">
+                    <span class="text-xs font-mono text-violet-400 font-bold">02 — FIND</span>
+                    <h3 class="text-lg font-bold text-white font-heading">Identify key moments</h3>
+                    <p class="text-xs text-zinc-400 leading-relaxed">
+                        ClipForge scans the video structure to detect candidate sections that stand out as standalone clips.
+                    </p>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="bg-[#121215] p-6 rounded-lg border border-white/5 space-y-3 relative">
+                    <span class="text-xs font-mono text-violet-400 font-bold">03 — CLIP</span>
+                    <h3 class="text-lg font-bold text-white font-heading">Generate ready clips</h3>
+                    <p class="text-xs text-zinc-400 leading-relaxed">
+                        Turn those moments into short-form videos ready for review, export, and publication.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Visual Flow Bar -->
+            <div class="p-4 bg-zinc-900/60 rounded-lg border border-white/5 flex justify-center items-center gap-4 text-xs font-mono text-zinc-400">
+                <span>Upload Video</span>
+                <span class="text-violet-400">→</span>
+                <span>Detect Moments</span>
+                <span class="text-violet-400">→</span>
+                <span class="text-white font-semibold">Short-Form Clip</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. FEATURE -> BENEFIT SECTION -->
+    <section id="features" class="py-24 px-6 border-t border-white/5">
+        <div class="max-w-5xl mx-auto space-y-16">
+            <div class="text-center max-w-3xl mx-auto space-y-4">
+                <p class="text-xs font-mono uppercase tracking-widest text-violet-400">Capability to Outcome</p>
+                <h2 class="text-3xl md:text-5xl font-bold text-white tracking-tight font-heading">
+                    Features designed around saving your time
+                </h2>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Feature 1 -->
+                <div class="bg-[#121215] p-8 rounded-xl border border-white/5 space-y-3">
+                    <p class="text-xs font-mono text-violet-400 uppercase">Long-form video analysis</p>
+                    <h3 class="text-xl font-bold text-white font-heading">Stop timeline scrubbing</h3>
+                    <p class="text-sm text-zinc-400 leading-relaxed">
+                        Don't scrub through an hour of footage looking for 20 seconds worth keeping. Let automated analysis highlight candidate sections for you.
+                    </p>
+                </div>
+<!-- Feature 2 -->
+                <div class="bg-[#121215] p-8 rounded-xl border border-white/5 space-y-3">
+                    <p class="text-xs font-mono text-violet-400 uppercase">Interesting-moment detection</p>
+                    <h3 class="text-xl font-bold text-white font-heading">Locate hidden highlights</h3>
+                    <p class="text-sm text-zinc-400 leading-relaxed">
+                        Find potential short-form clips without manually searching through the entire timeline from beginning to end.
+                    </p>
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="bg-[#121215] p-8 rounded-xl border border-white/5 space-y-3">
+                    <p class="text-xs font-mono text-violet-400 uppercase">Short-form formatting</p>
+                    <h3 class="text-xl font-bold text-white font-heading">Ready for mobile feeds</h3>
+                    <p class="text-sm text-zinc-400 leading-relaxed">
+                        Turn selected moments directly into content styled and formatted specifically for short-form vertical viewing.
+                    </p>
+                </div>
+
+                <!-- Feature 4 -->
+                <div class="bg-[#121215] p-8 rounded-xl border border-white/5 space-y-3">
+                    <p class="text-xs font-mono text-violet-400 uppercase">Fast processing</p>
+                    <h3 class="text-xl font-bold text-white font-heading">Bypass traditional editing lag</h3>
+                    <p class="text-sm text-zinc-400 leading-relaxed">
+                        Go from a long video to potential short-form clips without waiting through a traditional, multi-step editing workflow.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. THE BIG PROMISE / TRANSFORMATION -->
+    <section class="py-24 px-6 border-t border-white/5 bg-gradient-to-b from-zinc-950 to-[#121215]">
+        <div class="max-w-4xl mx-auto text-center space-y-8">
+            <div class="inline-block p-8 md:p-12 rounded-2xl bg-zinc-900/90 border border-white/10 space-y-6 w-full glow-effect">
+                <div class="space-y-3 font-heading text-2xl md:text-4xl font-bold text-white tracking-tight">
+                    <p>1 hour of content.</p>
+                    <p class="text-violet-400">20 seconds of attention.</p>
+                    <p>One less editing headache.</p>
+                </div>
+                <div class="w-12 h-0.5 bg-white/20 mx-auto"></div>
+                <p class="text-base md:text-lg text-zinc-400 max-w-xl mx-auto font-light leading-relaxed">
+                    ClipForge helps you get more short-form content out of the videos you've already created.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 8. OBJECTIONS AND REASSURANCE -->
+    <section id="faq" class="py-24 px-6 border-t border-white/5">
+        <div class="max-w-4xl mx-auto space-y-16">
+            <div class="text-center space-y-4">
+                <p class="text-xs font-mono uppercase tracking-widest text-zinc-500">Common Questions</p>
+                <h2 class="text-3xl md:text-5xl font-bold text-white tracking-tight font-heading">Clear Reassurance</h2>
+            </div>
+
+            <div class="space-y-8">
+                <!-- Q1 -->
+                <div class="p-8 rounded-xl bg-[#121215] border border-white/5 space-y-3">
+                    <h3 class="text-lg font-bold text-white font-heading">"Do I really need another editing tool?"</h3>
+                    <p class="text-sm text-zinc-400 leading-relaxed">
+                        You don't need another complicated timeline editor. ClipForge isn't designed to replace complex post-production software—it is built specifically around finding useful moments faster.
+                    </p>
+                </div>
+
+                <!-- Q2 -->
+                <div class="p-8 rounded-xl bg-[#121215] border border-white/5 space-y-3">
+                    <h3 class="text-lg font-bold text-white font-heading">"What if my video is long?"</h3>
+                    <p class="text-sm text-zinc-400 leading-relaxed">
+                        That is exactly what ClipForge is built for: starting with long-form content (like podcasts or long tutorials) and helping you identify shorter moments worth turning into clips.
+                    </p>
+                </div>
+
+                <!-- Q3 -->
+                <div class="p-8 rounded-xl bg-[#121215] border border-white/5 space-y-3">
+                    <h3 class="text-lg font-bold text-white font-heading">"Will I still have control over the final output?"</h3>
+                    <p class="text-sm text-zinc-400 leading-relaxed">
+                        Yes. ClipForge assists your process rather than completely replacing your creative judgment. It highlights potential moments; you make the final decision on what content is worth publishing.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 9. FINAL CTA -->
+    <section id="cta" class="py-24 md:py-32 px-6 border-t border-white/5 bg-zinc-950 text-center relative overflow-hidden">
+        <div class="max-w-3xl mx-auto space-y-8 relative z-10">
+            <h2 class="text-4xl md:text-6xl font-bold text-white tracking-tight leading-tight font-heading">
+                Stop searching through your videos. Start finding your clips.
+            </h2>
+            <p class="text-lg md:text-xl text-zinc-400 font-light max-w-xl mx-auto">
+                Your next short-form post might already be sitting inside your last long-form video.
+            </p>
+            <div class="pt-4 space-y-3">
+                <a href="#" class="inline-block px-10 py-5 bg-white text-black font-bold rounded-sm hover:bg-zinc-200 transition-all text-sm uppercase tracking-widest">
+                    Create my first clip
+                </a>
+                <p class="text-xs text-zinc-500 font-mono">
+                    Upload a video and see what ClipForge can find.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 10. FOOTER -->
+    <footer class="py-12 border-t border-white/10 bg-[#070707]">
+        <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-6">
+            <div class="space-y-2 text-center md:text-left">
+                <div class="flex items-center justify-center md:justify-start gap-2">
+                    <span class="w-3 h-3 bg-violet-500 rounded-sm"></span>
+                    <span class="text-sm font-bold text-white tracking-tight font-heading">CLIPFORGE</span>
+                </div>
+                <p class="text-xs text-zinc-500">
+                    Concept Copywriting & UX Design • Spec Case Study by <a href="index.html" class="text-zinc-400 hover:text-white underline font-medium">Elijah Amujo</a>
+                </p>
+            </div>
+
+            <div class="flex flex-wrap justify-center items-center gap-6 text-xs text-zinc-500 font-mono">
+                <a href="#problem" class="hover:text-white transition-colors">Problem</a>
+                <a href="#desired-outcome" class="hover:text-white transition-colors">Outcome</a>
+                <a href="#how-it-works" class="hover:text-white transition-colors">Workflow</a>
+                <a href="#faq" class="hover:text-white transition-colors">FAQ</a>
+                <a href="index.html" class="text-white hover:underline font-medium">← Portfolio</a>
+            </div>
+        </div>
+
+        <div class="max-w-6xl mx-auto px-6 mt-8 pt-6 border-t border-white/5 text-center text-[11px] text-zinc-600 font-mono">
+            <p>© 2026 ClipForge (Spec Project). All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
